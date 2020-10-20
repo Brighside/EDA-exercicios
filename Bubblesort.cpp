@@ -15,6 +15,7 @@ int main () {
 
 void bubbleSort (int *array) {
     int aux = 0;
+    
     for(int i = 0; i < 4; i++) { //compara um elemento do array com todos os outros
         for(int j = i + 1; j < 5; j++) {
             if(array[i] > array[j]) { // para ordenar em ordem decrescente, trocar ">" por "<"
