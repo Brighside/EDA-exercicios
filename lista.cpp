@@ -51,7 +51,7 @@ int menu(int *vetor){
             imprime(vetor);
             break;
         case 5:
-            cout << "Até a proxima (° ~ °)/\n";
+            cout << "Ate a proxima (* - *)/\n";
             break;
        default:
             cout << "Opção invalida\n" << 
