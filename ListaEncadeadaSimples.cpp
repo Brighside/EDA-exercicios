@@ -12,7 +12,7 @@ struct no
 typedef struct no *noPtr;
 noPtr topo = NULL;
 
-bool listaVazia(noPtr topo);
+bool listaVazia();
 void Menu();
 void listar();
 void empilhar();
@@ -23,7 +23,7 @@ int main() {
     return 0;
 }
 
-bool listaVazia(noPtr topo) {
+bool listaVazia() {
     if(topo != NULL) {
         return false;
     }
@@ -65,15 +65,18 @@ void Menu() {
 }
 
 void listar() {
-    noPtr p = topo;
-    if(listaVazia){
+    noPtr p = new no;
+    p = topo;
+
+    if(listaVazia()){
         cout << "Lista Vazia!\n";
     } else {
         cout << "Pilha: ";
-        // while(p->prox != NULL) {
-        //     cout << p->info;
-        //     p = p->prox;
-        // }
+        do {
+            cout << p->info << ' ';
+            p = p->prox;
+        } while(p);
+        cout << '\n';
     }
 
     Menu();
@@ -89,7 +92,6 @@ void empilhar() {
     topo = p;
 
     cout << "O Numero " << p->info << " foi adicionado na pilha!\n";
-    cout <<"topo->info: " << topo->info << "\ntopo->prox: " << topo->prox << '\n';
     Menu();
 }
 
