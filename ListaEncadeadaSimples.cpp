@@ -96,5 +96,14 @@ void empilhar() {
 }
 
 void desempilhar() {
-
+    if (listaVazia()) { 
+        cout << "Lista Vazia!\n";
+    } else
+    {
+        noPtr p = topo;
+        topo = topo->prox;
+        cout << "elemento " << p->info << " apagado!\n";
+        delete p;
+    } 
+    Menu();
 }
