@@ -2,6 +2,7 @@
 using namespace std;
 
 // implementação de uma lista Encadeada Simples
+// Pilha (stack)
 
 struct no
 {
@@ -69,7 +70,7 @@ void listar() {
     p = topo;
 
     if(listaVazia()){
-        cout << "Lista Vazia!\n";
+        cout << "Pilha Vazia!\n";
     } else {
         cout << "Pilha: ";
         do {
